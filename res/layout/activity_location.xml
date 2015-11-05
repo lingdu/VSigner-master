@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="none" 
+    android:background="@color/theme_bg_color">
+
+    <LinearLayout
+        android:id="@+id/ll_channel_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/login_logo"
+                android:drawablePadding="20sp"
+                android:gravity="center_vertical"
+                android:text="@string/locating"
+                android:textColor="@color/logo"
+                android:textSize="30sp"
+                android:textStyle="bold" >
+            </TextView>
+            
+            <TextView
+                style="@style/Smile.TextView._Gray"
+                android:id="@+id/tv_refresh_time"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/refresh_time_format"
+                android:textSize="14sp" />
+            
+            <LinearLayout style="@style/Register_Input" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/channel_name"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_channel_name"
+                    android:gravity="center_vertical"
+                    style="@style/Register_Edit"/>
+            </LinearLayout>
+            
+            <LinearLayout style="@style/Register_Input" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/latitude"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_latitude"
+                    android:gravity="center_vertical"
+                    style="@style/Register_Edit"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Register_Input" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/lontitude"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_longtitude"
+                    android:gravity="center_vertical"
+                    style="@style/Register_Edit"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="@dimen/register_margin"
+                android:layout_marginRight="@dimen/register_margin"
+                android:layout_marginTop="@dimen/register_margin"
+                android:background="@drawable/base_edit_input"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/channel_info"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_sign_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/register_margin"
+                android:layout_marginRight="@dimen/register_margin"
+                android:background="@drawable/base_edit_input"
+                android:padding="@dimen/register_margin" />
+
+            <Button
+                android:id="@+id/btn_refresh_location"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/base_action_bar_height"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_login_selector"
+                android:onClick="btn_refresh_location_onclick"
+                android:text="@string/refresh_location"
+                android:textColor="@color/base_color_text_white"
+                android:textSize="@dimen/text_size_large" />
+            
+            <Button
+                android:id="@+id/btn_sign"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/base_action_bar_height"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_login_selector"
+                android:onClick="btn_sign_onclick"
+                android:text="@string/sign"
+                android:textColor="@color/base_color_text_white"
+                android:textSize="@dimen/text_size_large" />
+            
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/base_action_bar_height"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_logout_selector"
+                android:onClick="btn_cancel_onclick"
+                android:text="@string/cancel"
+                android:textColor="@color/base_color_text_white"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
